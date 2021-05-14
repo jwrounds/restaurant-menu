@@ -1,4 +1,4 @@
-package com.company;
+package restaurant;
 
 public class Main {
 
