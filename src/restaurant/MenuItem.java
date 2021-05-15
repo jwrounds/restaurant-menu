@@ -13,6 +13,27 @@ public class MenuItem {
         this.category = category;
     }
 
+    public String toString() {
+        return "Name: " + name + ", Price: $" + price + ", Category: " + category + "\nDescription: " + description;
+    }
+
+    public boolean equals(Object aComparison) {
+        if (aComparison == this) {
+            return true;
+        }
+
+        if (aComparison == null) {
+            return false;
+        }
+
+        if (aComparison.getClass() != getClass()) {
+            return false;
+        }
+
+        MenuItem aMenuItem = (MenuItem) aComparison;
+        return aMenuItem.getName().equals(getName());
+    }
+
     public String getName() { return name; }
     public void setName(String aName) { name = aName; }
     public double getPrice() { return price; }

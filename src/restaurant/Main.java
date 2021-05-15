@@ -16,8 +16,9 @@ public class Main {
 	    newMenu.addMenuItem(fries);
 	    newMenu.addMenuItem(milkShake);
 
-	    for (MenuItem item : newMenu.menuItems) {
-	        System.out.println("Name: " + item.getName() + ", Price: $" + item.getPrice());
-        }
+		System.out.println(newMenu);
+		newMenu.printItem("RickMac");
+		newMenu.removeMenuItem(greens);
+		System.out.println(newMenu);
     }
 }

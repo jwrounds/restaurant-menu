@@ -18,6 +18,22 @@ public class Menu {
         lastUpdated = new Date().toString();
     }
 
+    public String toString() {
+        StringBuilder str = new StringBuilder("\n***MENU***\n");
+        for (MenuItem item : menuItems) {
+            str.append(item.toString()).append("\n***\n");
+        }
+        return str.toString();
+    }
+
+    public void printItem(String itemName) {
+        for (MenuItem item : menuItems) {
+            if (item.getName().equals(itemName)) {
+                System.out.println(item);
+            }
+        }
+    }
+
     public String getLastUpdated() { return lastUpdated; }
     public void setLastUpdated() { lastUpdated = new Date().toString(); }
 }
